@@ -15,7 +15,7 @@ export default function Home() {
                 <div className="circle circle-1"></div>
                 <div className="circle circle-2"></div>
               </div>
-              <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">Available for work</p>
+              <p className="text-base leading-7 text-gray-500 dark:text-gray-400">Available for work</p>
             </div>
           </div>
           <hr className="w-full bg-gray-700 h-[2px] border-none" />

@@ -3,6 +3,7 @@ import { Space_Grotesk } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import SectionContainer from '@/components/sectionContainer';
+import BottomNavigation from '@/components/bottomNav';
 
 const inter = Inter({ subsets: ['latin'] });
 const space_grotesk = Space_Grotesk({
@@ -23,11 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white ${space_grotesk.className}`}>
+      <body className={`bg-white ] text-black antialiased dark:bg-gray-950 dark:text-white ${space_grotesk.className}`}>
         <SectionContainer>
+          <BottomNavigation/>
           <div className="flex h-screen flex-col justify-between ">{children}</div>
         </SectionContainer>
       </body>
     </html>
   );
 }
+
+
+//pl-[calc(100vw-100%)
