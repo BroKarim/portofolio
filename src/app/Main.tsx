@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <section>
-        <div className=" sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="z-1 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           {/* header */}
           <div className="space-y-2 flex justify-between items-center pt-6 ">
             <h1 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10  md:leading-14">Me</h1>
@@ -30,7 +30,7 @@ export default function Home() {
               <p className="text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
               <p className="mt-2 mb-8 text-sm sm:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div className=" mb-4 space-y-8  items-center  space-x-3">
+              <div className=" mb-4 z-1 space-y-8  items-center  space-x-3">
                 <a href="" className="bg-[#151619] border border-gray-600 p-2 font-medium text-sm text-white inline-flex items-center space-x-2 rounded">
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -47,7 +47,7 @@ export default function Home() {
                   </svg>
                   <span>Facebook</span>
                 </a>
-                <a href="" className="bg-[#151619] border border-gray-600 p-2 font-medium text-sm text-white inline-flex items-center space-x-2 rounded">
+                <a href="" className="bg-[#151619]  border border-gray-600 p-2 font-medium text-sm text-white inline-flex items-center space-x-2 rounded">
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
