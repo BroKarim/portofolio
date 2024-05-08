@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-white ] text-black antialiased dark:bg-gray-950 dark:text-white ${space_grotesk.className}`}>
+      <body className={` ${space_grotesk.className}`}>
         <SectionContainer>
           <BottomNavigation/>
           <div className="flex h-screen flex-col justify-between ">{children}</div>

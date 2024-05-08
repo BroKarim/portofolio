@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, CardContentWrapper } from '@/components/cards';
 import { MapPin } from 'lucide-react';
 import { Button } from '@/components/button';
+import Info from '@/components/info';
+import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
 
 export default function Home() {
   return (
@@ -8,24 +10,18 @@ export default function Home() {
       <section>
         <div className="z-1 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           {/* header */}
-          <div className="space-y-2 flex justify-between items-center pt-6 ">
-            <h1 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10  md:leading-14">Me</h1>
-            <div className="flex gap-1 items-center ">
-              <div className="relative w-6 h-6 flex justify-center items-center">
-                <div className="circle circle-1"></div>
-                <div className="circle circle-2"></div>
-              </div>
-              <p className="text-base leading-7 text-gray-500 dark:text-gray-400">Available for work</p>
-            </div>
-          </div>
+          <Info title="Me" availableForWork={true} />
           <hr className="w-full bg-gray-700 h-[2px] border-none" />
 
           {/* profile */}
-          <div className="container  flex flex-col justify-center sm:py-8 py-6  lg:flex-row lg:justify-between">
+          <PageHeader>
             <div className="flex flex-col relative  rounded-sm lg:max-w-md text-left">
               <div className="flex md:flex-col flex-row sm:gap-0 gap-2">
-                <h1 className=" font-bold text-lg md:text-2xl">Charlie Framerling.</h1>
-                <h1 className=" font-bold text-gray-500 text-lg md:text-2xl">Lead product designer</h1>
+                <PageHeaderHeading>
+                  Charlie Framerling.
+                  <br className="hidden md:block" />
+                  <span className="text-gray-500 pl-2 md:pl-0">Lead product designer</span>
+                </PageHeaderHeading>
               </div>
               <p className="text-sm mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
@@ -94,7 +90,7 @@ export default function Home() {
                 className="object-cover object-top w-full h-full "
               />
             </div>
-          </div>
+          </PageHeader>
 
           <br />
 
@@ -234,11 +230,11 @@ export default function Home() {
                   <CardDescription>Unlocking Creativity: Your Biweekly Design Fix, spam-free</CardDescription>
                 </CardContentWrapper>
 
-                <CardContentWrapper className='gap-4'>
+                <CardContentWrapper className="gap-4">
                   <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
                     <input type="text" name="username" id="username" className="block flex-1 border-0 bg-transparent py-1.5 pl-2 text-white placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="name@gmail.com" />
                   </div>
-                  <Button className='bg-[#24262b] py-1.5 px-4'>Subscribe</Button>
+                  <Button className="bg-[#24262b] py-1.5 px-4">Subscribe</Button>
                 </CardContentWrapper>
               </CardHeader>
             </Card>

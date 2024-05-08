@@ -43,7 +43,7 @@ const BottomNavigation = () => {
       id: 4,
       title: 'Writing',
       icons: <NotebookPen size={15}/>,
-      path: '/',
+      path: '/writing',
     },
     {
       id: 5,
