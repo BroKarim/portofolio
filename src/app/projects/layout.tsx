@@ -1,12 +1,13 @@
-import SectionContainer from '@/components/sectionContainer';
-import Projects from './page';
+import React, { ReactNode } from 'react';
 
-export default function ProjectLayout() {
+interface Props {
+  children?: ReactNode;
+}
+
+export default function ProjectLayout({ children }: Props) {
   return (
     <>
-      <SectionContainer>
-        <Projects />
-      </SectionContainer>
+      <div className="py-10">{children}</div>
     </>
   );
 }

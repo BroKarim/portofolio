@@ -13,7 +13,6 @@ export default function Home() {
           <Info title="Me" availableForWork={true} />
           <hr className="w-full bg-gray-700 h-[2px] border-none" />
 
-          {/* profile */}
           <PageHeader>
             <div className="flex flex-col relative  rounded-sm lg:max-w-md text-left">
               <div className="flex md:flex-col flex-row sm:gap-0 gap-2">

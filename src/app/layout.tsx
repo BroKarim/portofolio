@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import SectionContainer from '@/components/sectionContainer';
 import BottomNavigation from '@/components/bottomNav';
+import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 const space_grotesk = Space_Grotesk({
@@ -24,15 +25,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${space_grotesk.className}`}>
+      <body className={`min-h-screen relative  ${space_grotesk.className}`}>
         <SectionContainer>
-          <BottomNavigation/>
-          <div className="flex h-screen flex-col justify-between ">{children}</div>
+          <div className='flex flex-col justify-between'>
+            <BottomNavigation />
+            {children}
+            {/* <div className="flex h-screen flex-col justify-between ">{children}</div> */}
+            <Footer />
+          </div>
         </SectionContainer>
       </body>
     </html>
   );
 }
-
 
 //pl-[calc(100vw-100%)

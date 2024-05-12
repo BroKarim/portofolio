@@ -1,12 +1,17 @@
-import SectionContainer from '@/components/sectionContainer';
-import Writing from './page';
+import React, { ReactNode } from 'react';
+import Loading from '@/components/loading';
+import { Suspense } from 'react';
 
-export default function WritingLayout() {
+interface Props {
+  children?: ReactNode;
+}
+
+export default function WritingLayout({ children }: Props) {
   return (
     <>
-      <SectionContainer>
-        <Writing />
-      </SectionContainer>
+      <div className="py-10">
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+      </div>
     </>
   );
 }
