@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { cn } from '../../lib/utils';
+import { cn } from '../lib/utils';
 
 const PageHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { children?: React.ReactNode }>(({ className,children, }, ref) => (
   <div ref={ref} className={cn('container  flex flex-col justify-center sm:py-8 py-6  lg:flex-row lg:justify-between', className)}>

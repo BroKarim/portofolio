@@ -17,7 +17,7 @@ const BottomNavigation = () => {
     { name: 'Home', icon: <SquareMenu size={20} /> },
     { name: 'Email', icon: <Mail size={20} /> },
     { name: 'Share', icon: <Share size={20} /> },
-    { name: 'Download', icon: <ArrowDownToLine size={20} /> },
+    // { name: 'Download', icon: <ArrowDownToLine size={20} /> },
   ];
 
   const Menus = [

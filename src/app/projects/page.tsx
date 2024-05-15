@@ -2,8 +2,19 @@ import { PageHeader, PageHeaderHeading, PageHeaderDescription } from '@/componen
 import Info from '@/components/info';
 import { Card, CardContentWrapper, CardHeader, CardTitle, CardDescription } from '@/components/cards';
 import Image from 'next/image';
+import { ProjectCard } from '@/components/project-card';
+import { getAllContents } from '@/lib/mdx';
+import type { GetStaticPropsResult, InferGetStaticPropsType } from 'next/types';
+import type { Project } from '@/lib/types/contents';
 
-export default function Projects() {
+// Fungsi ini menggantikan getStaticProps
+async function fetchProjects(): Promise<Project[]> {
+  const projects = await getAllContents('projects');
+  return projects;
+}
+
+export default async function Projects() {
+  const projects = await fetchProjects();
   return (
     <>
       <section>
@@ -53,19 +64,9 @@ export default function Projects() {
                   />
                 </CardContentWrapper>
               </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Apple</CardTitle>
-                  <CardDescription className="font-bold">Lead product designer</CardDescription>
-                </CardHeader>
-                <CardContentWrapper>
-                  <img
-                    src="https://images.unsplash.com/photo-1714907135093-e60f0a730574?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    className="object-cover object-top w-full h-[64] rounded-md "
-                  />
-                </CardContentWrapper>
-              </Card>
+              {projects.map((post) => (
+                <ProjectCard {...post} key={post.title} />
+              ))}
             </div>
           </div>
         </div>
@@ -73,3 +74,17 @@ export default function Projects() {
     </>
   );
 }
+
+// type BlogProps = {
+//   projects: Project[];
+// };
+
+// export async function getStaticProps(): Promise<GetStaticPropsResult<BlogProps>> {
+//   const projects = await getAllContents('projects');
+
+//   return {
+//     props: {
+//       projects,
+//     },
+//   };
+// }
