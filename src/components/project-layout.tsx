@@ -1,5 +1,6 @@
 // ni yg ngatur layout untuk content
 //karena content kita cuman project makanya dinamaakkan project-layout
+// data mdx bsia dipanggil karena ada MDXProvider
 
 import { MDXProvider } from '@mdx-js/react';
 import type { ReactElement } from 'react';

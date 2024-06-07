@@ -75,16 +75,16 @@ export default async function Projects() {
   );
 }
 
-// type BlogProps = {
-//   projects: Project[];
-// };
+type BlogProps = {
+  projects: Project[];
+};
 
-// export async function getStaticProps(): Promise<GetStaticPropsResult<BlogProps>> {
-//   const projects = await getAllContents('projects');
+export async function getInitialProps (): Promise<GetStaticPropsResult<BlogProps>> {
+  const projects = await getAllContents('projects');
 
-//   return {
-//     props: {
-//       projects,
-//     },
-//   };
-// }
+  return {
+    props: {
+      projects,
+    },
+  };
+}
