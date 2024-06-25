@@ -1,4 +1,5 @@
 import createMDX from '@next/mdx';
+import { withContentlayer } from 'next-contentlayer';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -12,4 +13,6 @@ const withMDX = createMDX({
 });
 
 // Merge MDX config with Next.js config
-export default withMDX(nextConfig);
+const combinedConfig = withContentlayer(withMDX(nextConfig));
+
+export default combinedConfig;

@@ -3,18 +3,11 @@ import Info from '@/components/info';
 import { Card, CardContentWrapper, CardHeader, CardTitle, CardDescription } from '@/components/cards';
 import Image from 'next/image';
 import { ProjectCard } from '@/components/project-card';
-import { getAllContents } from '@/lib/mdx';
-import type { GetStaticPropsResult, InferGetStaticPropsType } from 'next/types';
-import type { Project } from '@/lib/types/contents';
-
-// Fungsi ini menggantikan getStaticProps
-async function fetchProjects(): Promise<Project[]> {
-  const projects = await getAllContents('projects');
-  return projects;
-}
+import { allPosts } from 'contentlayer/generated';
 
 export default async function Projects() {
-  const projects = await fetchProjects();
+  const posts = allPosts;
+
   return (
     <>
       <section>
@@ -64,9 +57,15 @@ export default async function Projects() {
                   />
                 </CardContentWrapper>
               </Card>
-              {projects.map((post) => (
-                <ProjectCard {...post} key={post.title} />
-              ))}
+              {posts?.length ? (
+                <>
+                  {posts.map((post, idx) => (
+                    <ProjectCard key={idx} {...post} />
+                  ))}
+                </>
+              ) : (
+                <p>No posts published.</p>
+              )}
             </div>
           </div>
         </div>
@@ -74,17 +73,3 @@ export default async function Projects() {
     </>
   );
 }
-
-// type BlogProps = {
-//   projects: Project[];
-// };
-
-// export async function getStaticProps(): Promise<GetStaticPropsResult<BlogProps>> {
-//   const projects = await getAllContents('projects');
-
-//   return {
-//     props: {
-//       projects,
-//     },
-//   };
-// }
