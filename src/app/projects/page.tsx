@@ -1,20 +1,28 @@
+// ada masalh di getPostsData
+//karen datanya belum kebaca sehingga blogs kosong
+
 import { PageHeader, PageHeaderHeading, PageHeaderDescription } from '@/components/page-header';
 import Info from '@/components/info';
 import { Card, CardContentWrapper, CardHeader, CardTitle, CardDescription } from '@/components/cards';
-import Image from 'next/image';
-import { ProjectCard } from '@/components/project-card';
-import { getAllContents } from '@/lib/mdx';
-import type { GetStaticPropsResult, InferGetStaticPropsType } from 'next/types';
-import type { Project } from '@/lib/types/contents';
+import { getPostsData } from '@/lib/mdx';
+import Link from 'next/link';
 
-// Fungsi ini menggantikan getStaticProps
-async function fetchProjects(): Promise<Project[]> {
-  const projects = await getAllContents('projects');
-  return projects;
-}
+type Content = {
+  id: string;
+  title: string;
+  description: string;
+  date: Date;
+  author: string;
+};
 
 export default async function Projects() {
-  const projects = await fetchProjects();
+  const blogs: Content[] = await getPostsData();
+  console.log('susah bet : ', blogs);
+
+  //Case: no posts
+  if (blogs.length === 0) {
+    return <div className="container mx-auto p-4">There are no posts yet...</div>;
+  }
   return (
     <>
       <section>
@@ -64,9 +72,18 @@ export default async function Projects() {
                   />
                 </CardContentWrapper>
               </Card>
-              {projects.map((post) => (
-                <ProjectCard {...post} key={post.title} />
-              ))}
+
+              {/* ntra component card lagsung panggil disini, codenya nengok aja di github branch mdx-error di project- */}
+              {blogs.map((blog) => {
+                return (
+                  <div key={blog.id}>
+                    <Link href={`/projects/${blog.id}`}>
+                      <p className="text-white">{blog.title}</p>
+                      <span className="ml-2 text-xs text-white ">{blog.date.toLocaleDateString()}</span>
+                    </Link>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -88,3 +105,4 @@ export default async function Projects() {
 //     },
 //   };
 // }
+// export default Projects;
