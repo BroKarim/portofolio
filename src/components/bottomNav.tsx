@@ -14,9 +14,9 @@ import path from 'path';
 
 const BottomNavigation = () => {
   const Tools = [
-    { name: 'Home', icon: <SquareMenu size={20} /> },
-    { name: 'Email', icon: <Mail size={20} /> },
-    { name: 'Share', icon: <Share size={20} /> },
+    { name: 'Home', icon: <SquareMenu color={"fffff"} size={20} /> },
+    { name: 'Email', icon: <Mail color={"ffff"} size={20} /> },
+    { name: 'Share', icon: <Share color={"ffff"} size={20} /> },
     // { name: 'Download', icon: <ArrowDownToLine size={20} /> },
   ];
 
@@ -86,7 +86,7 @@ const BottomNavigation = () => {
           {Tools.map((menu, i) => (
             <li key={i} >
               <button
-                className="flex flex-col text-center items-center hover:bg-[#18181] cursor-pointer px-2"
+                className="flex flex-col text-center text-white items-center hover:bg-[#18181] cursor-pointer px-2"
                 onClick={() => {
                   setActive(i);
                   if (menu.name === 'Home') {

@@ -4,7 +4,6 @@
 import React, { useRef } from 'react';
 import Info from '@/components/info';
 import { PageHeader, PageHeaderHeading, PageHeaderDescription } from '@/components/page-header';
-import { Card, CardContentWrapper, CardHeader, CardTitle, CardDescription } from '@/components/cards';
 import { Calendar, Fullscreen, X } from 'lucide-react';
 
 export default function Writing() {
@@ -43,7 +42,7 @@ export default function Writing() {
           {/* my blog */}
           <div className="flex md:justify-between flex-col md:flex-row justify-center  gap-4 md:items-start">
             <div className="w-full grid md:grid-cols-2 grid-cols-1  gap-6 py-2 ">
-              <Card onClick={openModal}>
+              {/* <Card onClick={openModal}>
                 <CardContentWrapper>
                   <img
                     src="https://images.unsplash.com/photo-1714907135093-e60f0a730574?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -68,7 +67,7 @@ export default function Writing() {
                   </div>
                   <div>Health</div>
                 </CardContentWrapper>
-              </Card>
+              </Card> */}
               <dialog id="modal" ref={modalRef} className="p-4 overflow-hidden ">
                 <div className="w-full flex text-right gap-2 py-2 justify-end">
                   <a href="https://christoshrousis.com/05-how-to-communicate-with-an-iframe-using-react-hooks/" target="_blank">

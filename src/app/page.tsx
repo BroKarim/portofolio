@@ -1,13 +1,14 @@
-import Image from 'next/image';
-import Main from './Main';
-import { Suspense } from 'react';
-import Loading from '@/components/loading';
-export default function Page() {
+import { MapPin } from 'lucide-react';
+import { Button } from '@/components/button';
+import Info from '@/components/info';
+import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/components/page-header';
+import { WelcomeSection } from '@/components/welcomSection';
+export default function Home() {
   return (
-    <div className="my-10">
-      <Suspense fallback={<Loading />}>
-        <Main />
-      </Suspense>
-    </div>
+    <>
+      <section>
+        <WelcomeSection />
+      </section>
+    </>
   );
 }

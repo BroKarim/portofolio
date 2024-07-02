@@ -3,7 +3,7 @@
 
 import { PageHeader, PageHeaderHeading, PageHeaderDescription } from '@/components/page-header';
 import Info from '@/components/info';
-import { Card, CardContentWrapper, CardHeader, CardTitle, CardDescription } from '@/components/cards';
+
 import { getPostsData } from '@/lib/mdx';
 import Link from 'next/link';
 
@@ -46,33 +46,6 @@ export default async function Projects() {
           {/* my project */}
           <div className="flex md:justify-between flex-col md:flex-row justify-center  gap-4 md:items-start">
             <div className="w-full grid md:grid-cols-2 grid-cols-1  gap-6 py-2 ">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Apple</CardTitle>
-                  <CardDescription className="font-bold">Lead product designer</CardDescription>
-                </CardHeader>
-                <CardContentWrapper>
-                  <img
-                    src="https://images.unsplash.com/photo-1714907135093-e60f0a730574?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    className="object-cover object-top w-full h-[64] rounded-md "
-                  />
-                </CardContentWrapper>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <CardTitle>Apple</CardTitle>
-                  <CardDescription className="font-bold">Lead product designer</CardDescription>
-                </CardHeader>
-                <CardContentWrapper>
-                  <img
-                    src="https://images.unsplash.com/photo-1714907135093-e60f0a730574?q=80&w=1836&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    className="object-cover object-top w-full h-[64] rounded-md "
-                  />
-                </CardContentWrapper>
-              </Card>
-
               {/* ntra component card lagsung panggil disini, codenya nengok aja di github branch mdx-error di project- */}
               {blogs.map((blog) => {
                 return (
