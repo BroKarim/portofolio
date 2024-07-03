@@ -25,15 +25,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`min-h-screen relative  ${space_grotesk.className}`}>
-        <div className="flex flex-col justify-between">
+      <body className={` relative  overscroll-y-none bg-gray-900 antialiased selection:bg-violet-600/90  ${space_grotesk.className}`}>
+        <svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light" width="100%" height="100%">
+          <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch" />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noise)" />
+        </svg>
+        <div className="flex flex-col justify-between text-white relative z-10 ">
           <BottomNavigation />
           {children}
-          <Footer />
+        </div>
+        <div className="pointer-events-none absolute inset-0 w-full h-full">
+          <div className="h-full bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')] bg-top bg-repeat bg-cover opacity-[0.3]" />
         </div>
       </body>
     </html>
   );
 }
-
-//pl-[calc(100vw-100%)

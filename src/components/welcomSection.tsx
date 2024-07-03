@@ -10,10 +10,10 @@ import Profile from '../../public/assets/profile.png';
 import Image from 'next/image';
 
 export function WelcomeSection() {
-  let [count, setCount] = useState(0);
+  
 
   return (
-    <section className="min-h-screen bg-[#e6e6e6] pb-20 pt-10">
+    <section className="min-h-screen  pb-20 pt-10">
       <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
         <div className="flex lg:items-center lg:gap-8 ">
           <div className=" md:w-[500px] flex flex-col justify-center">

@@ -19,8 +19,8 @@ interface CardProps {
 const CardProject: React.FC<CardProps> = ({ title, description, logo, chartData, profit }) => {
   return (
     <>
-      <Card className="rounded-2xl ">
-        <CardHeader className="flex flex-col hover:bg-slate-400 hover:rounded-2xl items-start justify-center space-y-0 py-6">
+      <Card className={` rounded-2xl ${chartData ? 'card-content  px-4 ' : 'card-content   h-24'}`}>
+        <CardHeader className=" hover:bg-slate-400 hover:rounded-2xl items-start justify-center space-y-0 py-6">
           <div className="text-sm  flex justify-between items-center w-full">
             <div className="flex gap-1 items-center justify-start">
               <Image src={logo} alt={`${title} logo`} style={{ width: '30px', height: '30px' }} />
@@ -31,9 +31,9 @@ const CardProject: React.FC<CardProps> = ({ title, description, logo, chartData,
           <p>{description}</p>
         </CardHeader>
         {chartData && (
-          <div className="card-content px-4">
+          <CardContent className="card-content px-4">
             <Chart data={chartData} />
-          </div>
+          </CardContent>
         )}
       </Card>
     </>
