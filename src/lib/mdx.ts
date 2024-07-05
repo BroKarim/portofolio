@@ -32,6 +32,7 @@ export async function getPostsData(): Promise<Blog[]> {
 
 //data satuan
 export async function getPostData(filename: string): Promise<Omit<Blog, 'id'>> {
+  console.log('getPostData filename:', filename); // Debug log
   const fullPath = join(process.cwd(), 'src/content/project', `${filename}.mdx`);
   const fileContents = readFileSync(fullPath, 'utf8');
   const { data } = matter(fileContents);

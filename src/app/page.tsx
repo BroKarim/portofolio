@@ -47,7 +47,7 @@ export default function Home() {
 
             <div className="animate_right  md:w-full h-[600px] overflow-y-scroll space-y-0  no-scrollbar  grid row-span-1 lg:gap-10 md:grid-cols-2 ">
               {cardData.map((card, index) => (
-                <CardProject key={index} title={card.title} logo={card.logo} profit={card.profit} description={card.description} chartData={card.chartData} />
+                <CardProject key={index} title={card.title} logo={card.logo} profit={card.profit} link={card.link} description={card.description} chartData={card.chartData} />
               ))}
             </div>
           </div>

@@ -3,6 +3,7 @@ import Chart from './chart';
 import { ReactSVG } from 'react-svg';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 interface ChartData {
   month: string;
@@ -13,23 +14,26 @@ interface CardProps {
   title: string;
   logo: StaticImageData;
   description: string;
-  profit: number;
+  profit?: number;
+  link: string;
   chartData?: ChartData[];
 }
-const CardProject: React.FC<CardProps> = ({ title, description, logo, chartData, profit }) => {
+const CardProject: React.FC<CardProps> = ({ title, description, logo, chartData, profit, link }) => {
   return (
     <>
-      <Card className={` rounded-2xl ${chartData ? 'card-content  px-4 ' : 'card-content   h-24'}`}>
-        <CardHeader className=" hover:bg-slate-400 hover:rounded-2xl items-start justify-center space-y-0 py-6">
-          <div className="text-sm  flex justify-between items-center w-full">
-            <div className="flex gap-1 items-center justify-start">
-              <Image src={logo} alt={`${title} logo`} style={{ width: '30px', height: '30px' }} />
-              <CardTitle className="font-medium">{title}</CardTitle>
+      <Card className={` rounded-2xl ${chartData ? 'card-content   ' : 'card-content  flex flex-1'}`}>
+        <Link href={link} target="_blank">
+          <CardHeader className=" hover:bg-slate-400  hover:rounded-2xl w-full flex flex-1 items-start justify-center  ">
+            <div className="text-sm  flex justify-between items-center w-full">
+              <div className="flex gap-1 items-center justify-start">
+                <Image src={logo} alt={`${title} logo`} style={{ width: '30px', height: '30px' }} />
+                <CardTitle className="font-medium">{title}</CardTitle>
+              </div>
+              {profit && <div className=" font-bold">${profit}</div>}
             </div>
-            <div className=" font-bold">${profit}</div>
-          </div>
-          <p>{description}</p>
-        </CardHeader>
+            <p className="pb-2">{description}</p>
+          </CardHeader>
+        </Link>
         {chartData && (
           <CardContent className="card-content px-4">
             <Chart data={chartData} />

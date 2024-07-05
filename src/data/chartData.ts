@@ -1,7 +1,11 @@
 import Dumbbel from '../../public/assets/dumbble.png';
 import Gumroad from '../../public/assets/Gumroad.png';
 import Instagram from '../../public/assets/intagram.png';
+import Nephtune from '../../public/assets/neph.png';
+import NusaGuide from '../../public/assets/nusaGuide.png';
+import TCC from '../../public/assets/tcc.png';
 import { StaticImageData } from 'next/image';
+import { getPostNames } from '@/lib/mdx';
 
 interface ChartData {
   month: string;
@@ -11,8 +15,9 @@ interface ChartData {
 interface CardData {
   title: string;
   description: string;
-  profit: number;
+  profit?: number;
   logo: StaticImageData;
+  link: string;
   chartData?: ChartData[];
 }
 export const cardData: CardData[] = [
@@ -20,7 +25,7 @@ export const cardData: CardData[] = [
     title: 'Weekly project',
     logo: Instagram,
     description: 'Free weekly project you can copy',
-    profit: 0,
+    link: 'https://www.instagram.com/brokariim/',
     chartData: [
       { month: 'Sep', value: 0 },
       { month: 'Nov', value: 0 },
@@ -36,6 +41,7 @@ export const cardData: CardData[] = [
     logo: Gumroad,
     description: 'All my product digital, its free',
     profit: 300,
+    link: 'https://www.notion.so/brokarim/Note-c0447220f8eb4ba4a8807620d76e4662',
     chartData: [
       { month: 'Sep', value: 0 },
       { month: 'Nov', value: 0 },
@@ -48,29 +54,40 @@ export const cardData: CardData[] = [
   },
 
   {
-    title: 'Card 2',
-    logo: Dumbbel,
-    description: 'This is the description for card 2',
-    profit: 300,
+    title: 'Nephtune',
+    logo: Nephtune,
+    description: 'System that connects donors who have excess items with recipients',
+    link: '/projects/Nephtune.mdx',
+    // link: 'https://github.com/alfnsnff/Nepthune/tree/master',
   },
 
   {
-    title: 'Card 2',
+    title: 'Training Code Center',
+    logo: TCC,
+    description: 'Competitive Programming Hub for Syiah Kuala Univ. ',
+
+    link: 'https://github.com/fadhrr',
+  },
+  {
+    title: 'Nusa Guide',
+    logo: NusaGuide,
+    description: 'a web application developed by I GUSTI NGURAH RAI team for IL massive project',
+
+    link: 'https://github.com/ngkwisnu/tour-guide-apps',
+  },
+  {
+    title: 'BroKarim-Project',
     logo: Dumbbel,
-    description: 'This is the description for card 2',
-    profit: 300,
+    description: 'All BroKarim Project in repo',
+
+    link: 'https://www.notion.so/brokarim/Note-c0447220f8eb4ba4a8807620d76e4662',
   },
   {
     title: 'Card 2',
     logo: Dumbbel,
     description: 'This is the description for card 2',
-    profit: 300,
-  },
-  {
-    title: 'Card 2',
-    logo: Dumbbel,
-    description: 'This is the description for card 2',
-    profit: 300,
+
+    link: 'https://www.notion.so/brokarim/Note-c0447220f8eb4ba4a8807620d76e4662',
   },
   // add more card objects as needed
 ];
