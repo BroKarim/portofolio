@@ -41,10 +41,10 @@ export function ImagePreview({ src, alt, className, customLink, wrapperClassName
             </a>
           </div>
           <a
-            className="absolute -bottom-7 left-0 font-medium text-black/80 underline decoration-transparent 
-                       underline-offset-2 outline-none transition-colors hover:text-black hover:decoration-black
-                       focus-visible:text-black focus-visible:decoration-inherit dark:text-white/80 
-                       dark:hover:text-white dark:hover:decoration-white dark:focus-visible:text-white"
+            className="absolute -bottom-7 left-0 font-medium text-white/80 underline decoration-transparent 
+                       underline-offset-2 outline-none transition-colors hover:text-gray-400 
+                       focus-visible:text-black focus-visible:decoration-inherit 
+                        dark:hover:decoration-white dark:focus-visible:text-white"
             href={customLink}
             target="_blank"
             rel="noreferrer"

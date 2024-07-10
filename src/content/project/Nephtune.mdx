@@ -5,7 +5,21 @@ date: '2023-12-24'
 author: 'donis.dev'
 ---
 
-### My first Blog Post
+export const metadata = {
+  title: 'My first blog post',
+  description: 'An awesome blog post about important stuff',
+  date: '2023-12-24',
+  author: 'donis.dev',
+};
+
+<article className="mt-4">
+  <h1 className="text-4xl font-bold">{title}</h1>
+  <p className="text-gray-600">{description}</p>
+  <p className="text-sm text-gray-400">{author}</p>
+  <p className="text-sm text-gray-400">{date}</p>
+</article>
+
+## My first Blog Post
 
 Duis adipisicing ad pariatur cupidatat consequat pariatur reprehenderit proident culpa.
 Est aliqua consectetur velit Lorem minim dolore ipsum id sunt.

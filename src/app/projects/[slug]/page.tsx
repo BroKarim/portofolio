@@ -39,7 +39,7 @@ export default async function BlogPage({ params }: ProjectPageProps) {
   const ProjectMarkdown = dynamic(() => import('../../../content/project/' + slug + '.mdx'));
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container min-h-screen mx-auto p-4">
       <div>
         <Link prefetch={false} href={'/'} className="text-sm font-medium p-2 rounded-md hover:bg-slate-200 dark:hover:bg-zinc-600">
           &larr; All Blogs

@@ -80,7 +80,7 @@ export const cardData: CardData[] = [
     logo: Dumbbel,
     description: 'All BroKarim Project in repo',
 
-    link: 'https://www.notion.so/brokarim/Note-c0447220f8eb4ba4a8807620d76e4662',
+    link: '/projects/second_blog.mdx',
   },
   {
     title: 'Card 2',

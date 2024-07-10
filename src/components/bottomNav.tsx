@@ -1,14 +1,31 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { PersonStanding, Home, Layers2, Share, SquareMenu, Mail, ArrowDownToLine, Download, NotebookPen, BriefcaseBusiness, Wrench } from 'lucide-react';
+import {
+  PersonStanding,
+  Home,
+  Layers2,
+  Share,
+  SquareMenu,
+  Mail,
+  ArrowDownToLine,
+  Download,
+  NotebookPen,
+  BriefcaseBusiness,
+  Wrench
+} from 'lucide-react';
 import Link from 'next/link';
 import path from 'path';
+import { link } from 'fs';
 
 const BottomNavigation = () => {
   const Tools = [
-    { name: 'Home', icon: <SquareMenu color={'white'} size={20} /> },
-    { name: 'Resume', icon: <Mail color={'white'} size={20} /> },
-    { name: 'About', icon: <PersonStanding color={'white'} size={20} /> },
+    { name: 'Home', icon: <SquareMenu color={'white'} size={20} />, link: '/' },
+    { name: 'Resume', icon: <Mail color={'white'} size={20} />, link: '/' },
+    {
+      name: 'About',
+      icon: <PersonStanding color={'white'} size={20} />,
+      link: '/about'
+    }
     // { name: 'Download', icon: <ArrowDownToLine size={20} /> },
   ];
 
@@ -20,9 +37,15 @@ const BottomNavigation = () => {
         <ul className="flex   justify-center items-center relative rounded-md px-4 border border-gray-700 bg-[#09090b] py-2">
           {Tools.map((menu, i) => (
             <li key={i}>
-              <button className="flex flex-col text-center text-white items-center  cursor-pointer px-2">
-                <span className={` ${active === i ? ' duration-700 opacity-100  font-bold' : 'opacity-40'} `}>{menu.icon}</span>
-              </button>
+              <Link href={menu.link}>
+                <button className="flex flex-col text-center text-white items-center  cursor-pointer px-2">
+                  <span
+                    className={` ${active === i ? ' duration-700 opacity-100  font-bold' : 'opacity-40'} `}
+                  >
+                    {menu.icon}
+                  </span>
+                </button>
+              </Link>
             </li>
           ))}
         </ul>

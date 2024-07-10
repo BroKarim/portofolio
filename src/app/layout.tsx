@@ -1,16 +1,12 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import SectionContainer from '@/components/sectionContainer';
+import '@/styles/globals.css';
 import BottomNavigation from '@/components/bottomNav';
 import Footer from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'] });
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
-  // variable: '--font-space-grotesk',
 });
 
 export const metadata: Metadata = {

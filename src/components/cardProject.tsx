@@ -22,7 +22,7 @@ const CardProject: React.FC<CardProps> = ({ title, description, logo, chartData,
   return (
     <>
       <Card className={` rounded-2xl ${chartData ? 'card-content   ' : 'card-content  flex flex-1'}`}>
-        <Link href={link} target="_blank">
+        <Link href={link}>
           <CardHeader className=" hover:bg-slate-400  hover:rounded-2xl w-full flex flex-1 items-start justify-center  ">
             <div className="text-sm  flex justify-between items-center w-full">
               <div className="flex gap-1 items-center justify-start">
