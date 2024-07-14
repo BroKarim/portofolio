@@ -7,29 +7,40 @@ import type { Content, Project } from '@/lib/types/content';
 
 type ContentLayoutProps = {
   children: ReactElement<ContentSlugProps>;
-  meta: Pick<Content, 'title' | 'tags' | 'publishedAt' | 'description' | 'banner'> & Pick<Project, 'bannerLink' | 'date'>;
+  meta: Pick<
+    Content,
+    'title' | 'tags' | 'publishedAt' | 'description' | 'banner'
+  > &
+    Pick<Project, 'bannerLink' | 'date'>;
 };
 
-export function ContentLayout({ meta, children }: ContentLayoutProps): JSX.Element {
+export function ContentLayout({
+  meta,
+  children
+}: ContentLayoutProps): JSX.Element {
   const { title, description, publishedAt, banner, bannerLink, tags } = meta;
-  // const { type, slug } = children.props;
-  // const contentIsBlog = type === 'projects';
 
   return (
     <>
-      <div className="pt-0">
-        <ImagePreview src={banner} alt={title} customLink={bannerLink} className="max-h-[448px] object-cover" />
+      <main className="pt-0 px-4 mx-auto max-w-screen-xl">
+        <ImagePreview
+          src={banner}
+          alt={title}
+          customLink={bannerLink}
+          className="max-h-[448px] object-cover"
+        />
         <section className="mt-8 grid gap-2">
+          <p className="text-sm text-white">{publishedAt}</p>
           <h1 className="text-2xl font-bold md:text-4xl">{title}</h1>
-          <p className="text-sm text-gray-600 dark:text-gray-300">Written on {publishedAt} by BroKariim</p>
+          <p className="text-lg">{description}</p>
           <hr className="mt-4 dark:border-gray-600" />
           <section className="mt-4 grid gap-8 lg:grid-cols-[auto,1fr]">
-            <article className="prose prose-lg max-w-4xl prose-invert text-white">
+            <article className="prose prose-lg max-w-full prose-invert text-white">
               <MDXProvider>{children}</MDXProvider>
             </article>
           </section>
         </section>
-      </div>
+      </main>
     </>
   );
 }

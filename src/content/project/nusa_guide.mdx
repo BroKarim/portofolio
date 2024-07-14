@@ -1,0 +1,41 @@
+import { ContentLayout } from '../../components/layout/projects-layout.tsx';
+import Banner from '/public/assets/project/nusa.png';
+export const meta = {
+  title: 'Nusa Guide',
+  publishedAt: 'March 2023',
+  banner: Banner,
+  description:
+    'an efficient system that connects donors who have excess items with recipients.',
+  tags: 'nextjs,tailwindcss,typescript,firebase',
+  category: 'Team base project',
+  bannerLink: 'https://github.com/ngkwisnu/tour-guide-apps'
+};
+
+export default ({ children }) => (
+  <ContentLayout meta={meta}>{children}</ContentLayout>
+);
+
+# **Overview**
+
+Nusa Guide is a project developed by my team and me as a final project for Infinite Learning. This project is designed to offer users a seamless experience in browsing and booking travel tours. My role in this project was as a frontend developer, responsible for creating a dynamic and user-friendly interface.
+
+## The Tech Stack
+
+For this project, I chose to use the following technologies:
+
+- React.js: For building the dynamic user interface.
+- Node.js & Express.js: For server-side logic and RESTful API development.
+- MySQL: For storing and managing data.
+- JWT & Cookies: For authentication and session management (Note: Cookie management is yet to be completed).
+
+## Features
+
+- Browse Travel Circuits: Users can explore detailed information about various travel circuits.
+- Book Travel Tours: Users can easily book travel tours.
+- Search Functionality: Users can search for trips based on specific criteria.
+- Reviews: Users can leave reviews for tours.
+- User Authentication and Profile Management: Secure login and registration for users, along with profile management.
+
+## Conclusion
+
+Nusa Guide provides an efficient and user-friendly platform for browsing and booking travel tours. It combines robust backend functionality with a dynamic frontend to deliver a seamless user experience. Despite the cookie management feature still being in progress, the project successfully meets its primary goals. My contribution to this project was focused on frontend development, ensuring a smooth and interactive user experience.

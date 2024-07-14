@@ -25,10 +25,14 @@ export default function Footer() {
           <div className="mt-10 flex border-t border-gray-700 py-4 flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
             <p className="order-2 md:order-1 mt-8 md:mt-0">
               {' '}
-              Proudly built with <span className="font-bold text-white">NextJs</span>{' '}
+              Proudly built with{' '}
+              <span className="font-bold text-white">NextJs</span>{' '}
             </p>
             <div className="order-1 md:order-2">
-              <p className="order-2 md:order-1 mt-8 md:mt-0"> &copy; Created by BroKarim </p>
+              <p className="order-2 md:order-1 mt-8 md:mt-0">
+                {' '}
+                &copy; Created by BroKarim{' '}
+              </p>
             </div>
           </div>
         </div>

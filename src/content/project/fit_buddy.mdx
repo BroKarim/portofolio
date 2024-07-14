@@ -1,0 +1,37 @@
+import { ContentLayout } from '../../components/layout/projects-layout.tsx';
+import Banner from '/public/assets/project/fit.png';
+export const meta = {
+  title: 'Fit Buddy',
+  publishedAt: 'March 2023',
+  banner: Banner,
+  description:
+    'a website designed to help users find suitable workout routines based on BMI calculations.',
+  tags: 'nextjs,tailwindcss,typescript,firebase',
+  category: 'Team base project',
+  bannerLink: 'https://github.com/alfnsnff/Nepthune'
+};
+
+export default ({ children }) => (
+  <ContentLayout meta={meta}>{children}</ContentLayout>
+);
+
+# **Overview**
+
+Fit Buddy is a website designed to help users find suitable workout routines based on BMI calculations. My role in this project was as a frontend developer. This website was developed by my team and me to fulfill the final project requirements for our Artificial Intelligence course. It integrates AI concepts by using predefined rules set through JSON to classify users and suggest appropriate workouts.
+
+## The Tech Stack
+
+For this project, I chose to use the following technologies:
+
+- React.js: For building the dynamic user interface.
+- JSON: For making the classification and setting the results based on user inputs.
+
+## Features
+
+- User Input: Users can input their gender, height, weight, and body type.
+- BMI Calculation: The website calculates the user's BMI to classify their body type.
+- Workout Suggestions: It displays suitable workouts for users based on their BMI classification, enhanced with Giphy for a visual and engaging experience.
+
+## Conclusion
+
+Fit Buddy provides a personalized fitness experience by leveraging AI and user data to recommend tailored workout routines. Developed as part of an Artificial Intelligence course project, it demonstrates the practical application of AI in fitness. My contribution focused on frontend development, ensuring a seamless and interactive user interface.

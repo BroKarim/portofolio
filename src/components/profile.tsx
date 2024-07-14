@@ -27,15 +27,19 @@ export const Profile = ({ description }: { description: string }) => {
           </div>
           <div className="text-base opacity-80 gap-2 flex">
             <BriefcaseBusiness />
-            Farmer
+            Urban farmer
           </div>
         </div>
-        <p className="text-lg ">{description}</p>
+        <p className="text-lg mb-2 md:px-2">{description}</p>
+        <p className="text-lg md:px-2">
+          <strong>Want to level up your frontend skills?</strong> Sign up for my
+          free weekly project updates, code breakdowns, and source code👇🏻
+        </p>
         <div className="mt-10 ">
           <div className="flex w-full max-w-sm items-center  space-x-2">
-            <Input type="email" placeholder="Lets work with" />
+            <Input type="email" placeholder="Your email..." />
             <Button className="text-black bg-white" type="submit">
-              Contact
+              Subscribe
             </Button>
           </div>
           {/* social media */}

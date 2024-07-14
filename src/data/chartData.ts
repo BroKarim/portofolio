@@ -4,6 +4,8 @@ import Instagram from '../../public/assets/intagram.png';
 import Nephtune from '../../public/assets/neph.png';
 import NusaGuide from '../../public/assets/nusaGuide.png';
 import TCC from '../../public/assets/tcc.png';
+import Brokariim from '../../public/assets/kariim.png';
+import FitBuddy from '../../public/assets/fit.png';
 import { StaticImageData } from 'next/image';
 import { getPostNames } from '@/lib/mdx';
 
@@ -32,9 +34,9 @@ export const cardData: CardData[] = [
       { month: 'Jan', value: 0 },
       { month: 'Mar', value: 0 },
       { month: 'May', value: 0 },
-      { month: 'Jul', value: 0 },
+      { month: 'Jul', value: 0 }
       // add more data as needed
-    ],
+    ]
   },
   {
     title: 'Digital Product',
@@ -48,16 +50,17 @@ export const cardData: CardData[] = [
       { month: 'Jan', value: 0 },
       { month: 'Mar', value: 0 },
       { month: 'May', value: 0 },
-      { month: 'Jul', value: 0 },
+      { month: 'Jul', value: 0 }
       // add more data as needed
-    ],
+    ]
   },
 
   {
     title: 'Nephtune',
     logo: Nephtune,
-    description: 'System that connects donors who have excess items with recipients',
-    link: '/projects/Nephtune.mdx',
+    description:
+      'System that connects donors who have excess items with recipients',
+    link: '/projects/nephtune.mdx'
     // link: 'https://github.com/alfnsnff/Nepthune/tree/master',
   },
 
@@ -66,30 +69,31 @@ export const cardData: CardData[] = [
     logo: TCC,
     description: 'Competitive Programming Hub for Syiah Kuala Univ. ',
 
-    link: 'https://github.com/fadhrr',
+    link: '/projects/second_blog.mdx'
   },
   {
     title: 'Nusa Guide',
     logo: NusaGuide,
-    description: 'a web application developed by I GUSTI NGURAH RAI team for IL massive project',
+    description:
+      'a web application developed by I GUSTI NGURAH RAI team for IL massive project',
 
-    link: 'https://github.com/ngkwisnu/tour-guide-apps',
+    link: '/projects/nusa_guide.mdx'
   },
   {
     title: 'BroKarim-Project',
-    logo: Dumbbel,
-    description: 'All BroKarim Project in repo',
+    logo: Brokariim,
+    description: 'All my individual project, build in public every week ',
 
-    link: '/projects/second_blog.mdx',
+    link: 'https://github.com/orgs/BroKarim-Project/repositories'
   },
   {
-    title: 'Card 2',
-    logo: Dumbbel,
-    description: 'This is the description for card 2',
+    title: 'Fit Buddy',
+    logo: FitBuddy,
+    description:
+      'a website designed to help users find suitable workout routines based on BMI calculations. ',
 
-    link: 'https://www.notion.so/brokarim/Note-c0447220f8eb4ba4a8807620d76e4662',
-  },
-  // add more card objects as needed
+    link: '/projects/fit_buddy.mdx'
+  }
 ];
 
 /*

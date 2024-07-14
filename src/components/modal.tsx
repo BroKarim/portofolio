@@ -10,15 +10,32 @@ type ModalProps = PropsWithChildren<{
   closeModal: () => void;
 }>;
 
-export function Modal({ open, children, className = 'grid place-items-center', modalClassName, closePanelOnClick, closeModal }: ModalProps): JSX.Element {
+export function Modal({
+  open,
+  children,
+  className = 'grid place-items-center',
+  modalClassName,
+  closePanelOnClick,
+  closeModal
+}: ModalProps): JSX.Element {
   return (
     <>
       <div>
         {open && (
-          <Dialog className="relative z-50" open={open} onClose={closeModal} static>
+          <Dialog
+            className="relative z-50"
+            open={open}
+            onClose={closeModal}
+            static
+          >
             <div className="fixed inset-0 bg-black/40" aria-hidden="true" />
-            <div className={clsx('fixed inset-0 overflow-y-auto p-4', className)}>
-              <Dialog.Panel className={modalClassName} onClick={closePanelOnClick ? closeModal : undefined} >
+            <div
+              className={clsx('fixed inset-0 overflow-y-auto p-4', className)}
+            >
+              <Dialog.Panel
+                className={modalClassName}
+                onClick={closePanelOnClick ? closeModal : undefined}
+              >
                 {children}
               </Dialog.Panel>
             </div>

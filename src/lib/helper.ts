@@ -8,7 +8,10 @@ type PreventBubblingProps = {
 /**
  * Prevents the event from bubbling up the DOM tree.
  */
-export function preventBubbling({ preventDefault, callback }: PreventBubblingProps = {}) {
+export function preventBubbling({
+  preventDefault,
+  callback
+}: PreventBubblingProps = {}) {
   return (e: SyntheticEvent): void => {
     e.stopPropagation();
 

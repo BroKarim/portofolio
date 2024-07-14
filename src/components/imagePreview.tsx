@@ -11,7 +11,13 @@ type ImagePreviewProps = Omit<ImageProps, 'src'> & {
   wrapperClassName?: string;
 };
 
-export function ImagePreview({ src, alt, className, customLink, wrapperClassName }: ImagePreviewProps): JSX.Element {
+export function ImagePreview({
+  src,
+  alt,
+  className,
+  customLink,
+  wrapperClassName
+}: ImagePreviewProps): JSX.Element {
   const { open, openModal, closeModal } = useModal();
 
   const { src: imageLink } = src;
@@ -25,7 +31,11 @@ export function ImagePreview({ src, alt, className, customLink, wrapperClassName
       <Modal open={open} closeModal={closeModal}>
         <div className="relative">
           <div className="group relative max-w-6xl">
-            <Image className="max-h-[70vh] w-fit rounded-md object-contain" src={src} alt={alt} />
+            <Image
+              className="max-h-[70vh] w-fit rounded-md object-contain"
+              src={src}
+              alt={alt}
+            />
             <a
               className="absolute bottom-0 right-0 mx-2 mb-2 translate-y-4 rounded-md bg-white/40 px-2 py-1 
                          text-sm text-black/80 opacity-0 outline-none transition hover:!bg-accent-main 
@@ -54,8 +64,20 @@ export function ImagePreview({ src, alt, className, customLink, wrapperClassName
           </a>
         </div>
       </Modal>
-      <button className={clsx('smooth-tab grid', wrapperClassName)} onClick={openModal}>
-        <Image className={clsx('mx-auto cursor-pointer rounded-md transition hover:brightness-75', className)} src={src} alt={alt} title={alt} placeholder={placeholder} />
+      <button
+        className={clsx('smooth-tab grid', wrapperClassName)}
+        onClick={openModal}
+      >
+        <Image
+          className={clsx(
+            'mx-auto cursor-pointer rounded-md transition hover:brightness-75',
+            className
+          )}
+          src={src}
+          alt={alt}
+          title={alt}
+          placeholder={placeholder}
+        />
       </button>
     </>
   );

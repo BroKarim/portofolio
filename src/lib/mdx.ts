@@ -18,9 +18,16 @@ export type ContentSlugProps = {
 };
 
 //data satuan
-export async function getPostData(filename: string): Promise<Omit<Project, 'id'>> {
-  console.log('getPostData filename:', filename); // Debug log
-  const fullPath = join(process.cwd(), 'src/content/project', `${filename}.mdx`);
+
+export async function getPostData(
+  filename: string
+): Promise<Omit<Project, 'id'>> {
+  console.log('getPostData filename:', filename); 
+  const fullPath = join(
+    process.cwd(),
+    'src/content/project',
+    `${filename}.mdx`
+  );
   const fileContents = readFileSync(fullPath, 'utf8');
   const { data } = matter(fileContents);
 
@@ -32,10 +39,19 @@ export async function getPostData(filename: string): Promise<Omit<Project, 'id'>
     tags: data.tags,
     slug: data.slug,
     banner: data.banner,
-    publishedAt: data.publishedAt,
+    publishedAt: data.publishedAt
   };
 }
 
+// untuk baca khus about
+export async function getAboutData(filename: string): Promise<string> {
+  console.log('getAboutData filename:', filename); // Debug log
+  const fullPath = join(process.cwd(), 'src/content/about', `${filename}.mdx`);
+  const fileContents = readFileSync(fullPath, 'utf8');
+  const { content } = matter(fileContents);
+
+  return content;
+}
 /**
  * Scan the Project directory and return an array of file names
  * @returns

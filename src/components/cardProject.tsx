@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle
+} from './ui/card';
 import Chart from './chart';
 import { ReactSVG } from 'react-svg';
 import Image from 'next/image';
@@ -18,15 +24,28 @@ interface CardProps {
   link: string;
   chartData?: ChartData[];
 }
-const CardProject: React.FC<CardProps> = ({ title, description, logo, chartData, profit, link }) => {
+const CardProject: React.FC<CardProps> = ({
+  title,
+  description,
+  logo,
+  chartData,
+  profit,
+  link
+}) => {
   return (
     <>
-      <Card className={` rounded-2xl ${chartData ? 'card-content   ' : 'card-content  flex flex-1'}`}>
+      <Card
+        className={` rounded-2xl ${chartData ? 'card-content   ' : 'card-content  flex flex-1'}`}
+      >
         <Link href={link}>
           <CardHeader className=" hover:bg-slate-400  hover:rounded-2xl w-full flex flex-1 items-start justify-center  ">
             <div className="text-sm  flex justify-between items-center w-full">
               <div className="flex gap-1 items-center justify-start">
-                <Image src={logo} alt={`${title} logo`} style={{ width: '30px', height: '30px' }} />
+                <Image
+                  src={logo}
+                  alt={`${title} logo`}
+                  style={{ width: '30px', height: '30px' }}
+                />
                 <CardTitle className="font-medium">{title}</CardTitle>
               </div>
               {profit && <div className=" font-bold">${profit}</div>}

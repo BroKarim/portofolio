@@ -1,27 +1,40 @@
----
-title: 'My first blog post'
-description: 'An awesome blog post about important stuff'
-date: '2023-12-24'
-author: 'donis.dev'
----
-
-export const metadata = {
-  title: 'My first blog post',
-  description: 'An awesome blog post about important stuff',
-  date: '2023-12-24',
-  author: 'donis.dev',
+import { ContentLayout } from '../../components/layout/projects-layout.tsx';
+import Banner from '/public/assets/project/nephtune.png';
+export const meta = {
+  title: 'Nephtune',
+  publishedAt: 'March 2023',
+  banner: Banner,
+  description:
+    'an efficient system that connects donors who have excess items with recipients.',
+  tags: 'nextjs,tailwindcss,typescript,firebase',
+  category: 'Team base project',
+  bannerLink: 'https://github.com/alfnsnff/Nepthune'
 };
 
-<article className="mt-4">
-  <h1 className="text-4xl font-bold">{title}</h1>
-  <p className="text-gray-600">{description}</p>
-  <p className="text-sm text-gray-400">{author}</p>
-  <p className="text-sm text-gray-400">{date}</p>
-</article>
+export default ({ children }) => (
+  <ContentLayout meta={meta}>{children}</ContentLayout>
+);
 
-## My first Blog Post
+# **Overview**
+Nephtune is an efficient system that connects donors who have excess items with recipients who can utilize them on a nearby scale. This project was developed by my team and me to participate in the Google Hackfest competition. My role in this project was as a designer and frontend developer. Although we did not win, one unique aspect of this project is that it received a GitHub star from Sandhika Galih 😲.
+## The Tech Stack
 
-Duis adipisicing ad pariatur cupidatat consequat pariatur reprehenderit proident culpa.
-Est aliqua consectetur velit Lorem minim dolore ipsum id sunt.
-Velit nisi irure mollit officia pariatur excepteur occaecat duis aliqua id minim duis.
-Officia eu fugiat irure laborum dolore. Veniam ipsum labore nisi aliquip officia do sunt.
+For this project, I chose to use the following technologies:
+
+- Next.js for the frontend framework
+- TypeScript for static type checking
+- Tailwind CSS for styling
+- Shadcn for UI components
+- Firebase for database management, user authentication, and hosting, providing a comprehensive backend solution.
+
+
+## Features
+
+- User Authentication: Secure login and registration for users.
+- Donation Management: Users can donate their items.
+- Donation Pickup: Users can pick up donations from other donors.
+- Profile Management: Users can manage their donations and edit their profiles.
+
+## Conclusion
+
+Nephtune is a thoughtful and impactful system designed to facilitate the connection between donors and recipients, ensuring that excess items find new homes where they are needed. Despite not winning the competition, the project was well-received and even garnered a GitHub star from a notable developer, Sandhika Galih. This recognition highlights the innovative and practical nature of Nephtune. My contribution to this project was focused on the design and frontend development, ensuring a user-friendly and visually appealing interface.
