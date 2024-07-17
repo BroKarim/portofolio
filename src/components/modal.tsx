@@ -1,6 +1,6 @@
-import { Dialog } from '@headlessui/react';
-import { clsx } from 'clsx';
-import type { PropsWithChildren } from 'react';
+import { Dialog } from "@headlessui/react";
+import { clsx } from "clsx";
+import type { PropsWithChildren } from "react";
 
 type ModalProps = PropsWithChildren<{
   open: boolean;

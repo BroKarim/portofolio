@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import '@/styles/globals.css';
 import BottomNavigation from '@/components/bottomNav';
-import Footer from '@/components/footer';
 
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],

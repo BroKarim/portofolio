@@ -7,7 +7,7 @@ type AboutLayoutProps = {
   children: ReactElement<ContentSlugProps>;
 };
 
-export  function AboutLayout({ children }: AboutLayoutProps) {
+export function AboutLayout({ children }: AboutLayoutProps) {
   return (
     <>
       <div className="flex">

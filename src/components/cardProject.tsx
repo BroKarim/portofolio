@@ -4,12 +4,12 @@ import {
   CardDescription,
   CardHeader,
   CardTitle
-} from './ui/card';
-import Chart from './chart';
-import { ReactSVG } from 'react-svg';
-import Image from 'next/image';
-import { StaticImageData } from 'next/image';
-import Link from 'next/link';
+} from "./ui/card";
+import Chart from "./chart";
+import { ReactSVG } from "react-svg";
+import Image from "next/image";
+import { StaticImageData } from "next/image";
+import Link from "next/link";
 
 interface ChartData {
   month: string;

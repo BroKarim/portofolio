@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   LineChart,
   Line,
@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
   AreaChart,
   Area
-} from 'recharts';
+} from "recharts";
 
 interface ChartData {
   month: string;

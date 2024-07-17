@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import Profile from '../../public/assets/profile.png';
+import Image from "next/image";
+import Profile from "../../public/assets/profile.png";
 
 const BroKariim = () => (
   <Image

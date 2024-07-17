@@ -1,9 +1,9 @@
-'use client';
-import { MDXProvider } from '@mdx-js/react';
-import { ImagePreview } from '../imagePreview';
-import type { ContentSlugProps } from '@/lib/mdx';
-import type { ReactElement } from 'react';
-import type { Content, Project } from '@/lib/types/content';
+"use client";
+import { MDXProvider } from "@mdx-js/react";
+import { ImagePreview } from "../imagePreview";
+import type { ContentSlugProps } from "@/lib/mdx";
+import type { ReactElement } from "react";
+import type { Content, Project } from "@/lib/types/content";
 
 type ContentLayoutProps = {
   children: ReactElement<ContentSlugProps>;

@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import CardProject from '@/components/cardProject';
-import { cardData } from '@/data/chartData';
-import { Profile } from '@/components/profile';
+import CardProject from "@/components/cardProject";
+import { cardData } from "@/data/chartData";
+import { Profile } from "@/components/profile";
 
 export default function Home() {
   return (

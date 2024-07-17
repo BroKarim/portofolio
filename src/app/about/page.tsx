@@ -1,9 +1,8 @@
-'use client'
+"use client"
 
-import { MDXProvider } from '@mdx-js/react';
-import dynamic from 'next/dynamic';
-import { Profile } from '@/components/profile';
-import { getAboutData } from '@/lib/mdx';
+import { MDXProvider } from "@mdx-js/react";
+import dynamic from "next/dynamic";
+import { Profile } from "@/components/profile";
 
 const AboutMeMarkdown = dynamic(() => import('../../content/about/me.mdx'));
 
