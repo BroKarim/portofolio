@@ -8,6 +8,7 @@ import {
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import MailgunEmailForm from './mailgunEmailForm';
 
 export const Profile = ({ description }: { description: string }) => {
   return (
@@ -37,10 +38,7 @@ export const Profile = ({ description }: { description: string }) => {
         </p>
         <div className="mt-10 ">
           <div className="flex w-full max-w-sm items-center  space-x-2">
-            <Input type="email" placeholder="Your email..." />
-            <Button className="text-black bg-white" type="submit">
-              Subscribe
-            </Button>
+            <MailgunEmailForm />
           </div>
           {/* social media */}
           <div className="flex mt-8 gap-4">

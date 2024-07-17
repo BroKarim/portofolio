@@ -25,7 +25,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from './ui/button';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import path from 'path';
 import { link } from 'fs';
 
@@ -65,33 +65,26 @@ const BottomNavigation = () => {
                       </span>
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
+                  <DialogContent className="sm:max-w-[425px] bg-[#16171a]">
                     <DialogHeader>
-                      <DialogTitle>Edit profile</DialogTitle>
-                      <DialogDescription>
+                      <DialogTitle className="text-white">Contact</DialogTitle>
+                      <DialogDescription className="text-gray-400 ">
                         Make changes to your profile here. Click save when
                         you're done.
                       </DialogDescription>
                     </DialogHeader>
                     <div className="grid gap-4 py-4">
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
-                          Name
-                        </Label>
+                      <div className="flex flex-col  gap-4">
                         <Input
-                          id="name"
-                          defaultValue="Pedro Duarte"
-                          className="col-span-3"
+                          type="email"
+                          placeholder="Email"
+                          className="border-none focus:outline-none bg-[#24262b]"
                         />
                       </div>
-                      <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="username" className="text-right">
-                          Username
-                        </Label>
-                        <Input
-                          id="username"
-                          defaultValue="@peduarte"
-                          className="col-span-3"
+                      <div className="flex flex-col  gap-4">
+                        <Textarea
+                          placeholder="Message"
+                          className="resize-none border-none focus:outline-none bg-[#24262b]"
                         />
                       </div>
                     </div>

@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.0.3",
+    "@hookform/resolvers": "^3.9.0",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.3",
@@ -26,16 +28,21 @@
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.376.0",
+    "mailgun-js": "^0.22.0",
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.52.1",
     "react-svg": "^16.1.34",
     "reading-time": "^1.5.0",
     "recharts": "^2.12.7",
+    "resend": "^3.4.0",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/mailchimp__mailchimp_marketing": "^3.0.20",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
