@@ -14,8 +14,10 @@ export type Project = Content & {
   title: string;
   description: string;
   bannerLink?: string;
+  category?: string,
   date: Date;
   author: string;
+  github: string;
 };
 
 export type ContentType = 'projects';

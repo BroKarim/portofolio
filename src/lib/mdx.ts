@@ -1,15 +1,9 @@
-import type { StaticImageData } from 'next/image';
+
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import type { GetStaticPropsResult } from 'next';
 import type { Project, Content, ContentType } from './types/content';
 
-// export type ContentSlugProps = Pick<Content, 'slug' | 'title' | 'description'> & {
-//   type: ContentType;
-//   slug: string;
-
-// };
 export type ContentSlugProps = {
   type: 'projects'; // Adjust based on your actual content types
   slug: string;
@@ -17,17 +11,11 @@ export type ContentSlugProps = {
   description: string;
 };
 
-//data satuan
 
-export async function getPostData(
-  filename: string
-): Promise<Omit<Project, 'id'>> {
-  console.log('getPostData filename:', filename); 
-  const fullPath = join(
-    process.cwd(),
-    'src/content/project',
-    `${filename}.mdx`
-  );
+
+export async function getPostData(filename: string): Promise<Omit<Project, 'id'>> {
+  console.log('getPostData filename:', filename);
+  const fullPath = join(process.cwd(), 'src/content/project', `${filename}.mdx`);
   const fileContents = readFileSync(fullPath, 'utf8');
   const { data } = matter(fileContents);
 
@@ -38,8 +26,9 @@ export async function getPostData(
     author: data.author,
     tags: data.tags,
     slug: data.slug,
+    github:data.github,
     banner: data.banner,
-    publishedAt: data.publishedAt
+    publishedAt: data.publishedAt,
   };
 }
 
