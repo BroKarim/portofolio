@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer,
   AreaChart,
-  Area
+  Area,
 } from "recharts";
 
 interface ChartData {
@@ -39,7 +39,7 @@ const Chart: React.FC<ChartProps> = ({ data }) => (
         dataKey="month"
         axisLine={false}
         tickLine={false}
-        style={{ fontSize: ' 10px' }}
+        style={{ fontSize: " 10px" }}
         minTickGap={0}
       />
       <YAxis
@@ -48,7 +48,7 @@ const Chart: React.FC<ChartProps> = ({ data }) => (
         tickLine={false}
         width={30}
         padding={{ top: 50, bottom: 50 }}
-        style={{ fontSize: ' 10px' }}
+        style={{ fontSize: " 10px" }}
         domain={[200, 400]}
         ticks={[200, 400]}
       />

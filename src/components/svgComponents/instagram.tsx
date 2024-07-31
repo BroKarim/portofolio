@@ -1,11 +1,21 @@
-import * as React from 'react';
+import * as React from "react";
 const SvgComponent: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 32 32"
+    {...props}
+  >
     <rect width={28} height={28} x={2} y={2} fill="url(#a)" rx={6} />
     <rect width={28} height={28} x={2} y={2} fill="url(#b)" rx={6} />
     <rect width={28} height={28} x={2} y={2} fill="url(#c)" rx={6} />
     <path fill="#fff" d="M23 10.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
-    <path fill="#fff" fillRule="evenodd" d="M16 21a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clipRule="evenodd" />
+    <path
+      fill="#fff"
+      fillRule="evenodd"
+      d="M16 21a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+      clipRule="evenodd"
+    />
     <path
       fill="#fff"
       fillRule="evenodd"
@@ -13,18 +23,39 @@ const SvgComponent: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
       clipRule="evenodd"
     />
     <defs>
-      <radialGradient id="a" cx={0} cy={0} r={1} gradientTransform="rotate(-55.376 27.916 .066) scale(25.5196)" gradientUnits="userSpaceOnUse">
+      <radialGradient
+        id="a"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(-55.376 27.916 .066) scale(25.5196)"
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#B13589" />
         <stop offset={0.793} stopColor="#C62F94" />
         <stop offset={1} stopColor="#8A3AC8" />
       </radialGradient>
-      <radialGradient id="b" cx={0} cy={0} r={1} gradientTransform="rotate(-65.136 29.766 6.89) scale(22.5942)" gradientUnits="userSpaceOnUse">
+      <radialGradient
+        id="b"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="rotate(-65.136 29.766 6.89) scale(22.5942)"
+        gradientUnits="userSpaceOnUse"
+      >
         <stop stopColor="#E0E8B7" />
         <stop offset={0.445} stopColor="#FB8A2E" />
         <stop offset={0.715} stopColor="#E2425C" />
         <stop offset={1} stopColor="#E2425C" stopOpacity={0} />
       </radialGradient>
-      <radialGradient id="c" cx={0} cy={0} r={1} gradientTransform="matrix(38.50003 -5.5 1.1764 8.23476 .5 3)" gradientUnits="userSpaceOnUse">
+      <radialGradient
+        id="c"
+        cx={0}
+        cy={0}
+        r={1}
+        gradientTransform="matrix(38.50003 -5.5 1.1764 8.23476 .5 3)"
+        gradientUnits="userSpaceOnUse"
+      >
         <stop offset={0.157} stopColor="#406ADC" />
         <stop offset={0.468} stopColor="#6A45BE" />
         <stop offset={1} stopColor="#6A45BE" stopOpacity={0} />

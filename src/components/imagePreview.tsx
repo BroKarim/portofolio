@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import { clsx } from 'clsx';
-import { useModal } from '@/lib/hooks/useModal';
-import { Modal } from './modal';
-import { preventBubbling } from '@/lib/helper';
-import type { ImageProps, StaticImageData } from 'next/image';
+import Image from "next/image";
+import { clsx } from "clsx";
+import { useModal } from "@/lib/hooks/useModal";
+import { Modal } from "./modal";
+import { preventBubbling } from "@/lib/helper";
+import type { ImageProps, StaticImageData } from "next/image";
 
-type ImagePreviewProps = Omit<ImageProps, 'src'> & {
+type ImagePreviewProps = Omit<ImageProps, "src"> & {
   src: StaticImageData;
   customLink?: string;
   wrapperClassName?: string;
@@ -16,14 +16,14 @@ export function ImagePreview({
   alt,
   className,
   customLink,
-  wrapperClassName
+  wrapperClassName,
 }: ImagePreviewProps): JSX.Element {
   const { open, openModal, closeModal } = useModal();
 
   const { src: imageLink } = src;
 
-  const imageIsGif = imageLink.endsWith('.gif');
-  const placeholder: ImageProps['placeholder'] = imageIsGif ? 'empty' : 'blur';
+  const imageIsGif = imageLink.endsWith(".gif");
+  const placeholder: ImageProps["placeholder"] = imageIsGif ? "empty" : "blur";
 
   customLink ??= imageLink;
   return (
@@ -65,13 +65,13 @@ export function ImagePreview({
         </div>
       </Modal>
       <button
-        className={clsx('smooth-tab grid', wrapperClassName)}
+        className={clsx("smooth-tab grid", wrapperClassName)}
         onClick={openModal}
       >
         <Image
           className={clsx(
-            'mx-auto cursor-pointer rounded-md transition hover:brightness-75',
-            className
+            "mx-auto cursor-pointer rounded-md transition hover:brightness-75",
+            className,
           )}
           src={src}
           alt={alt}

@@ -1,19 +1,7 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import {
-  PersonStanding,
-  Home,
-  Layers2,
-  Share,
-  SquareMenu,
-  Mail,
-  ArrowDownToLine,
-  Download,
-  NotebookPen,
-  BriefcaseBusiness,
-  Wrench
-} from 'lucide-react';
-import Link from 'next/link';
+"use client";
+import React, { useState, useEffect } from "react";
+import { PersonStanding, SquareMenu, Mail, Moon, CodeXml } from "lucide-react";
+import Link from "next/link";
 import {
   Dialog,
   DialogContent,
@@ -22,26 +10,25 @@ import {
   DialogFooter,
   DialogTitle,
   DialogTrigger
-} from '@/components/ui/dialog';
-import { Button } from './ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import path from 'path';
-import { link } from 'fs';
+} from "@/components/ui/dialog";
+import { Button } from "./ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { ThemeSwitch } from "./theme-switch";
 
 const BottomNavigation = () => {
   const Tools = [
-    { name: 'Home', icon: <SquareMenu color={'white'} size={20} />, link: '/' },
+    { name: "Home", icon: <SquareMenu color={"white"} size={20} />, link: "/" },
     {
-      name: 'Contach',
-      icon: <Mail color={'white'} size={20} />,
-      link: '/',
+      name: "Contach",
+      icon: <Mail color={"white"} size={20} />,
+      link: "/",
       isDialog: true
     },
     {
-      name: 'About',
-      icon: <PersonStanding color={'white'} size={20} />,
-      link: '/about'
+      name: "About",
+      icon: <PersonStanding color={"white"} size={20} />,
+      link: "/about"
     }
     // { name: 'Download', icon: <ArrowDownToLine size={20} /> },
   ];
@@ -51,6 +38,9 @@ const BottomNavigation = () => {
   return (
     <>
       <div className=" fixed flex  gap-2 left-1/2 z-30 transform -translate-x-1/2 bottom-4  py-2 ">
+        {/* change theme => jadiin component */}
+        <ThemeSwitch />
+        {/* main menu */}
         <ul className="flex   justify-center items-center relative rounded-md px-4 border border-gray-700 bg-[#09090b] py-2">
           {Tools.map((menu, i) => (
             <li key={i}>
@@ -59,7 +49,7 @@ const BottomNavigation = () => {
                   <DialogTrigger asChild>
                     <button className="flex flex-col text-center text-white items-center cursor-pointer px-2">
                       <span
-                        className={`${active === i ? 'duration-700 opacity-100 font-bold' : 'opacity-40'}`}
+                        className={`${active === i ? "duration-700 opacity-100 font-bold" : "opacity-40"}`}
                       >
                         {menu.icon}
                       </span>
@@ -97,7 +87,7 @@ const BottomNavigation = () => {
                 <Link href={menu.link}>
                   <button className="flex flex-col text-center text-white items-center cursor-pointer px-2">
                     <span
-                      className={`${active === i ? 'duration-700 opacity-100 font-bold' : 'opacity-40'}`}
+                      className={`${active === i ? "duration-700 opacity-100 font-bold" : "opacity-40"}`}
                     >
                       {menu.icon}
                     </span>
@@ -107,9 +97,10 @@ const BottomNavigation = () => {
             </li>
           ))}
         </ul>
+        {/* source code */}
         <div className="px-2 border rounded-md border-gray-700 bg-[#09090b] py-2">
           <button className="flex items-center justify-center gap-2 text-xs font-medium rounded-md">
-            <Download size={20} color={'#bd4242'} /> Build with Nextjs
+            <CodeXml size={20} color={"#bd4242"} />
           </button>
         </div>
         {/* kotak menu */}

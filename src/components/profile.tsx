@@ -1,21 +1,21 @@
-import { ProfileImage } from './profileImage';
+import { ProfileImage } from "./profileImage";
 import {
   MapPin,
   BriefcaseBusiness,
   File,
   Instagram,
-  Github
-} from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+  Github,
+} from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const Profile = ({ description }: { description: string }) => {
   return (
     <>
-      <div className=" md:w-[800px] mb-10 md:mb-0 w-full flex flex-col justify-center">
+      <div className=" md:w-[800px] mb-10 md:mb-0 w-full flex flex-col text-black justify-center dark:text-white">
         <ProfileImage />
-        <h1 className="mb-5 pr-16 text-2xl lg:text-4xl font-extrabold text-white">
-          Bro {'   '}
+        <h1 className="mb-5 pr-16 text-2xl lg:text-4xl  font-extrabold ">
+          Bro {"   "}
           <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
             Karim
           </span>

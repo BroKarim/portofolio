@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "@/styles/globals.css";
 import BottomNavigation from "@/components/bottomNav";
+import { ThemeProvider } from "@/components/themeProvider";
 
 const space_grotesk = Space_Grotesk({
   subsets: ["latin"],
-  display: "swap",
+  display: "swap"
 });
 
 // export const metadata: Metadata = {
@@ -14,29 +15,32 @@ const space_grotesk = Space_Grotesk({
 // };
 export const metadata: Metadata = {
   title: "Brokariim",
-  description: "Brokariim's Solopreneur Journey.",
+  description: "Brokariim's Solopreneur Journey."
 };
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={` relative  overscroll-y-none bg-gray-900 antialiased selection:bg-violet-600/90  ${space_grotesk.className}`}>
-        <svg className="pointer-events-none fixed isolate z-50 opacity-70 mix-blend-soft-light" width="100%" height="100%">
-          <filter id="noise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.80" numOctaves="4" stitchTiles="stitch" />
-          </filter>
-          <rect width="100%" height="100%" filter="url(#noise)" />
-        </svg>
-        <div className="flex flex-col justify-between text-white relative z-10 ">
-          <BottomNavigation />
-          {children}
-        </div>
-        <div className="pointer-events-none absolute inset-0 w-full h-full">
-          <div className="h-full bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')] bg-top bg-repeat bg-cover opacity-[0.3]" />
-        </div>
+      <body
+        className={` relative  overscroll-y-none bg-gray-900 antialiased selection:bg-violet-600/90  ${space_grotesk.className}`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex flex-col justify-between  relative z-10 ">
+            <BottomNavigation />
+            {children}
+          </div>
+          <div className="pointer-events-none absolute inset-0 w-full h-full">
+            <div className="h-full bg-white dark:bg-[url('https://res.cloudinary.com/delba/image/upload/h_500/bg_gradient_pfosr9')] bg-top bg-repeat bg-cover dark:opacity-[0.3]" />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

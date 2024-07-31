@@ -1,13 +1,13 @@
-import Dumbbel from '../../public/assets/dumbble.png';
-import Gumroad from '../../public/assets/Gumroad.png';
-import Instagram from '../../public/assets/intagram.png';
-import Nephtune from '../../public/assets/neph.png';
-import NusaGuide from '../../public/assets/nusaGuide.png';
-import TCC from '../../public/assets/tcc.png';
-import Brokariim from '../../public/assets/kariim.png';
-import FitBuddy from '../../public/assets/fit.png';
-import { StaticImageData } from 'next/image';
-import { getPostNames } from '@/lib/mdx';
+import Dumbbel from "../../public/assets/dumbble.png";
+import Gumroad from "../../public/assets/Gumroad.png";
+import Instagram from "../../public/assets/intagram.png";
+import Nephtune from "../../public/assets/neph.png";
+import NusaGuide from "../../public/assets/nusaGuide.png";
+import TCC from "../../public/assets/tcc.png";
+import Brokariim from "../../public/assets/kariim.png";
+import FitBuddy from "../../public/assets/fit.png";
+import { StaticImageData } from "next/image";
+import { getPostNames } from "@/lib/mdx";
 
 interface ChartData {
   month: string;
@@ -24,76 +24,76 @@ interface CardData {
 }
 export const cardData: CardData[] = [
   {
-    title: 'Weekly project',
+    title: "Weekly project",
     logo: Instagram,
-    description: 'Free weekly project you can copy',
-    link: 'https://www.instagram.com/brokariim/',
+    description: "Free weekly project you can copy",
+    link: "https://www.instagram.com/brokariim/",
     chartData: [
-      { month: 'Sep', value: 0 },
-      { month: 'Nov', value: 0 },
-      { month: 'Jan', value: 0 },
-      { month: 'Mar', value: 0 },
-      { month: 'May', value: 0 },
-      { month: 'Jul', value: 0 }
+      { month: "Sep", value: 0 },
+      { month: "Nov", value: 0 },
+      { month: "Jan", value: 0 },
+      { month: "Mar", value: 0 },
+      { month: "May", value: 0 },
+      { month: "Jul", value: 0 },
       // add more data as needed
-    ]
+    ],
   },
   {
-    title: 'Digital Product',
+    title: "Digital Product",
     logo: Gumroad,
-    description: 'All my product digital, its free',
+    description: "All my product digital, its free",
     profit: 300,
-    link: 'https://www.notion.so/brokarim/Note-c0447220f8eb4ba4a8807620d76e4662',
+    link: "https://www.notion.so/brokarim/Note-c0447220f8eb4ba4a8807620d76e4662",
     chartData: [
-      { month: 'Sep', value: 0 },
-      { month: 'Nov', value: 0 },
-      { month: 'Jan', value: 0 },
-      { month: 'Mar', value: 0 },
-      { month: 'May', value: 0 },
-      { month: 'Jul', value: 0 }
+      { month: "Sep", value: 0 },
+      { month: "Nov", value: 0 },
+      { month: "Jan", value: 0 },
+      { month: "Mar", value: 0 },
+      { month: "May", value: 0 },
+      { month: "Jul", value: 0 },
       // add more data as needed
-    ]
+    ],
   },
 
   {
-    title: 'Nephtune',
+    title: "Nephtune",
     logo: Nephtune,
     description:
-      'System that connects donors who have excess items with recipients',
-    link: '/projects/nephtune.mdx'
+      "System that connects donors who have excess items with recipients",
+    link: "/projects/nephtune.mdx",
     // link: 'https://github.com/alfnsnff/Nepthune/tree/master',
   },
 
   {
-    title: 'Training Code Center',
+    title: "Training Code Center",
     logo: TCC,
-    description: 'Competitive Programming Hub for Syiah Kuala Univ. ',
+    description: "Competitive Programming Hub for Syiah Kuala Univ. ",
 
-    link: '/projects/second_blog.mdx'
+    link: "/projects/second_blog.mdx",
   },
   {
-    title: 'Nusa Guide',
+    title: "Nusa Guide",
     logo: NusaGuide,
     description:
-      'a web application developed by I GUSTI NGURAH RAI team for IL massive project',
+      "a web application developed by I GUSTI NGURAH RAI team for IL massive project",
 
-    link: '/projects/nusa_guide.mdx'
+    link: "/projects/nusa_guide.mdx",
   },
   {
-    title: 'BroKarim-Project',
+    title: "BroKarim-Project",
     logo: Brokariim,
-    description: 'All my individual project, build in public every week ',
+    description: "All my individual project, build in public every week ",
 
-    link: 'https://github.com/orgs/BroKarim-Project/repositories'
+    link: "https://github.com/orgs/BroKarim-Project/repositories",
   },
   {
-    title: 'Fit Buddy',
+    title: "Fit Buddy",
     logo: FitBuddy,
     description:
-      'a website designed to help users find suitable workout routines based on BMI calculations. ',
+      "a website designed to help users find suitable workout routines based on BMI calculations. ",
 
-    link: '/projects/fit_buddy.mdx'
-  }
+    link: "/projects/fit_buddy.mdx",
+  },
 ];
 
 /*

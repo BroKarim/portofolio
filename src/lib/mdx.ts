@@ -1,8 +1,7 @@
-
 import { readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import type { Project, Content, ContentType } from './types/content';
+import type { Project } from './types/content';
 
 export type ContentSlugProps = {
   type: 'projects'; // Adjust based on your actual content types
@@ -11,11 +10,15 @@ export type ContentSlugProps = {
   description: string;
 };
 
-
-
-export async function getPostData(filename: string): Promise<Omit<Project, 'id'>> {
+export async function getPostData(
+  filename: string
+): Promise<Omit<Project, 'id'>> {
   console.log('getPostData filename:', filename);
-  const fullPath = join(process.cwd(), 'src/content/project', `${filename}.mdx`);
+  const fullPath = join(
+    process.cwd(),
+    'src/content/project',
+    `${filename}.mdx`
+  );
   const fileContents = readFileSync(fullPath, 'utf8');
   const { data } = matter(fileContents);
 
@@ -26,9 +29,9 @@ export async function getPostData(filename: string): Promise<Omit<Project, 'id'>
     author: data.author,
     tags: data.tags,
     slug: data.slug,
-    github:data.github,
+    github: data.github,
     banner: data.banner,
-    publishedAt: data.publishedAt,
+    publishedAt: data.publishedAt
   };
 }
 

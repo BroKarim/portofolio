@@ -1,6 +1,13 @@
-import * as React from 'react';
+import * as React from "react";
 const SvgComponent: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={800} height={800} fill="none" viewBox="0 0 24 24" {...props}>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={800}
+    height={800}
+    fill="none"
+    viewBox="0 0 24 24"
+    {...props}
+  >
     <g clipPath="url(#a)">
       <path
         fill="#000"

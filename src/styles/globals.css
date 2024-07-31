@@ -19,6 +19,7 @@
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
+    --text-color: 0 0% 0%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
@@ -40,6 +41,7 @@
 
   .dark {
     --background: 240 10% 3.9%;
+    --textColor: white;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -92,7 +94,7 @@
   }
 
   .chunk-container::after {
-    content: '';
+    content: "";
     @apply absolute -inset-4 shadow-xl rounded-xl border;
   }
 }

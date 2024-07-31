@@ -1,4 +1,4 @@
-import type { SyntheticEvent } from 'react';
+import type { SyntheticEvent } from "react";
 
 type PreventBubblingProps = {
   preventDefault?: boolean;
@@ -10,7 +10,7 @@ type PreventBubblingProps = {
  */
 export function preventBubbling({
   preventDefault,
-  callback
+  callback,
 }: PreventBubblingProps = {}) {
   return (e: SyntheticEvent): void => {
     e.stopPropagation();
@@ -24,5 +24,5 @@ export function preventBubbling({
  * Returns the content without the extension.
  */
 export function removeContentExtension(content: string): string {
-  return content.replace(/\.mdx$/, '');
+  return content.replace(/\.mdx$/, "");
 }

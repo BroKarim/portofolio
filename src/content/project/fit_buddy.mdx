@@ -1,17 +1,20 @@
-import { ContentLayout } from '../../components/layout/projects-layout.tsx';
-import Banner from '/public/assets/project/fit.png';
+import { ContentLayout } from "../../components/layout/projects-layout.tsx";
+import Banner from "/public/assets/project/fit.png";
 export const meta = {
-  title: 'Fit Buddy',
-  publishedAt: 'March 2023',
+  title: "Fit Buddy",
+  publishedAt: "March 2023",
   banner: Banner,
-  description: 'a website designed to help users find suitable workout routines based on BMI calculations.',
-  tags: 'nextjs,tailwindcss,typescript,firebase',
-  category: 'Team base project',
-  bannerLink: 'https://github.com/BroKarim/Fit-buddy',
-  github: 'https://github.com/BroKarim/Fit-buddy',
+  description:
+    "a website designed to help users find suitable workout routines based on BMI calculations.",
+  tags: "nextjs,tailwindcss,typescript,firebase",
+  category: "Team base project",
+  bannerLink: "https://github.com/BroKarim/Fit-buddy",
+  github: "https://github.com/BroKarim/Fit-buddy",
 };
 
-export default ({ children }) => <ContentLayout meta={meta}>{children}</ContentLayout>;
+export default ({ children }) => (
+  <ContentLayout meta={meta}>{children}</ContentLayout>
+);
 
 # **Overview**
 

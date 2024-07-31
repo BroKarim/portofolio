@@ -13,10 +13,10 @@ type ModalProps = PropsWithChildren<{
 export function Modal({
   open,
   children,
-  className = 'grid place-items-center',
+  className = "grid place-items-center",
   modalClassName,
   closePanelOnClick,
-  closeModal
+  closeModal,
 }: ModalProps): JSX.Element {
   return (
     <>
@@ -30,7 +30,7 @@ export function Modal({
           >
             <div className="fixed inset-0 bg-black/40" aria-hidden="true" />
             <div
-              className={clsx('fixed inset-0 overflow-y-auto p-4', className)}
+              className={clsx("fixed inset-0 overflow-y-auto p-4", className)}
             >
               <Dialog.Panel
                 className={modalClassName}

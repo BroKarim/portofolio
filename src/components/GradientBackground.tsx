@@ -1,5 +1,5 @@
 export const GradientBackground = ({
-  children
+  children,
 }: {
   children?: React.ReactNode;
 }) => {

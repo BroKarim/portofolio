@@ -3,7 +3,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle
+  CardTitle,
 } from "./ui/card";
 import Chart from "./chart";
 import { ReactSVG } from "react-svg";
@@ -30,12 +30,12 @@ const CardProject: React.FC<CardProps> = ({
   logo,
   chartData,
   profit,
-  link
+  link,
 }) => {
   return (
     <>
       <Card
-        className={` rounded-2xl ${chartData ? 'card-content   ' : 'card-content  flex flex-1'}`}
+        className={` rounded-2xl ${chartData ? "card-content   " : "card-content  flex flex-1"}`}
       >
         <Link href={link}>
           <CardHeader className=" hover:bg-slate-400  hover:rounded-2xl w-full flex flex-1 items-start justify-center  ">
@@ -44,7 +44,7 @@ const CardProject: React.FC<CardProps> = ({
                 <Image
                   src={logo}
                   alt={`${title} logo`}
-                  style={{ width: '30px', height: '30px' }}
+                  style={{ width: "30px", height: "30px" }}
                 />
                 <CardTitle className="font-medium">{title}</CardTitle>
               </div>
