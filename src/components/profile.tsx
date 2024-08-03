@@ -42,9 +42,13 @@ export const Profile = ({ description }: { description: string }) => {
               id="email-input"
               name="email"
               placeholder="Your email..."
-              className="text-black"
+              className="text-black border-black"
             />
-            <Button className="text-black bg-white" type="submit">
+            <Button
+              className="text-black bg-white border hover:bg-white border-black  hover:shadow-[6px_4px_0px_rgba(0,0,0,1)] dark:shadow-none"
+              type="submit"
+              
+            >
               Subscribe
             </Button>
           </div>

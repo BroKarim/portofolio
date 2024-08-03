@@ -8,12 +8,12 @@ export const MDXComponent = {
     </h1>
   ),
   h2: ({ children }: { children?: ReactNode }) => (
-    <h2 className="  text-4xl leading-[1.2] text-black font-bold dark:text-black">
+    <h2 className="  text-4xl leading-[1.2] text-black font-bold dark:text-white">
       {children}
     </h2>
   ),
   h3: ({ children }: { children?: ReactNode }) => (
-    <h3 className="mt-8 text-lg font-bold text-black dark:text-black">
+    <h3 className="mt-8 text-lg font-bold text-black dark:text-white">
       {children}
     </h3>
   ),

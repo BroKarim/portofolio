@@ -18,7 +18,7 @@ export function ThemeSwitch(): JSX.Element | null {
     setTheme(newTheme);
   };
   return (
-    <div className="px-2 border rounded-md border-gray-700 bg-[#09090b] py-2">
+    <div className="px-2 border rounded-md border-gray-700 dark:bg-[#09090b] py-2">
       <button
         onClick={flipTheme}
         className="flex items-center justify-center gap-2 text-xs font-medium rounded-md"
