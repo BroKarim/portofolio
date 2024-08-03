@@ -4,10 +4,11 @@ import {
   BriefcaseBusiness,
   File,
   Instagram,
-  Github,
+  Github
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const Profile = ({ description }: { description: string }) => {
   return (
@@ -20,20 +21,23 @@ export const Profile = ({ description }: { description: string }) => {
             Karim
           </span>
         </h1>
-        <div className="flex space-x-10 gap-10 mb-4">
-          <div className="text-base opacity-80 gap-2 flex">
+        <div className="flex space-x-10 gap-10 mb-4 font-semibold">
+          <div className="text-base  gap-2 flex">
             <MapPin />
             Aceh
           </div>
-          <div className="text-base opacity-80 gap-2 flex">
+          <div className="text-base  gap-2 flex">
             <BriefcaseBusiness />
             Urban farmer
           </div>
         </div>
         <p className="text-lg mb-2 md:px-2">{description}</p>
-        <p className="text-lg md:px-2">
-          <strong>Want to level up your frontend skills?</strong> Sign up for my
-          free weekly project updates, code breakdowns, and source code👇🏻
+        <p className="text-lg md:px-2 ">
+          <strong className="underline underline-offset-8 decoration-yellow-300 decoration-2 dark:no-underline">
+            Want to level up your frontend skills?
+          </strong>{" "}
+          Sign up for my free weekly project updates, code breakdowns, and
+          source code👇🏻
         </p>
         <div className="mt-10 ">
           <div className="flex w-full max-w-sm items-center  space-x-2">
@@ -47,25 +51,30 @@ export const Profile = ({ description }: { description: string }) => {
             <Button
               className="text-black bg-white border hover:bg-white border-black  hover:shadow-[6px_4px_0px_rgba(0,0,0,1)] dark:shadow-none"
               type="submit"
-              
             >
               Subscribe
             </Button>
           </div>
           {/* social media */}
           <div className="flex mt-8 gap-4">
-            <div className="flex gap-1">
+            <div className="flex gap-1 font-semibold">
               <File />
               Resume
             </div>
-            <div className="flex gap-1">
+            <Link
+              href="https://www.instagram.com/brokariim/"
+              className="flex gap-1 font-semibold"
+            >
               <Instagram />
               Instagram
-            </div>
-            <div className="flex gap-1">
+            </Link>
+            <Link
+              href="https://github.com/BroKarim"
+              className="flex gap-1 font-semibold"
+            >
               <Github />
               Github
-            </div>
+            </Link>
           </div>
         </div>
       </div>
