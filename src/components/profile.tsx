@@ -6,9 +6,8 @@ import {
   Instagram,
   Github
 } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import EmailSubscribe from "./emailSubsciber";
 
 export const Profile = ({ description }: { description: string }) => {
   return (
@@ -40,21 +39,8 @@ export const Profile = ({ description }: { description: string }) => {
           source code👇🏻
         </p>
         <div className="mt-10 ">
-          <div className="flex w-full max-w-sm items-center  space-x-2">
-            <Input
-              type="email"
-              id="email-input"
-              name="email"
-              placeholder="Your email..."
-              className="text-black border-black"
-            />
-            <Button
-              className="text-black bg-white border hover:bg-white border-black  hover:shadow-[6px_4px_0px_rgba(0,0,0,1)] dark:shadow-none"
-              type="submit"
-            >
-              Subscribe
-            </Button>
-          </div>
+          <EmailSubscribe />
+
           {/* social media */}
           <div className="flex mt-8 gap-4">
             <div className="flex gap-1 font-semibold">
