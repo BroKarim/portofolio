@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "./ui/use-toast";
 
+//bad code
 const EmailSubscribe = () => {
     const { toast } = useToast();
   const [email, setEmail] = useState("");
@@ -13,6 +14,7 @@ const EmailSubscribe = () => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
