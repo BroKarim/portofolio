@@ -1,22 +1,21 @@
-'use client'
+"use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "./ui/use-toast";
 
 //bad code
 const EmailSubscribe = () => {
-    const { toast } = useToast();
+  const { toast } = useToast();
   const [email, setEmail] = useState("");
 
-  const validateEmail = (email) => {
+  const validateEmail = (email: string): boolean => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
 
-
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!email || !validateEmail(email)) {
@@ -29,8 +28,8 @@ const EmailSubscribe = () => {
         title: "🎉 Nice!",
         description: "You'll get the emails now."
       });
-      // Di sini Anda bisa menambahkan logika untuk mengirim email ke backend
-      setEmail(""); // Reset input setelah berhasil
+
+      setEmail("");
     }
   };
 
@@ -58,5 +57,4 @@ const EmailSubscribe = () => {
   );
 };
 
-
-export default EmailSubscribe
+export default EmailSubscribe;
