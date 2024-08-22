@@ -2,40 +2,29 @@
 
 "use client";
 import React, { useState } from "react";
-import {
-  PersonStanding,
-  Mail,
-  CodeXml,
-  Linkedin,
-  Compass,
-  Twitter
-} from "lucide-react";
+import { PersonStanding, Mail, CodeXml, Linkedin, Compass, Twitter } from "lucide-react";
 import Link from "next/link";
 import { ThemeSwitch } from "./theme-switch";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger
-} from "@radix-ui/react-hover-card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@radix-ui/react-hover-card";
 
 const BottomNavigation = () => {
   const Tools = [
     {
       name: "Home",
       icon: <Compass className="text-black dark:text-white" size={20} />,
-      link: "/"
+      link: "/",
     },
     {
       name: "Contact",
       icon: <Mail className="text-black dark:text-white" size={20} />,
-      action: "toggle"
+      action: "toggle",
       // isDialog: true
     },
     {
       name: "About",
       icon: <PersonStanding className="text-black dark:text-white" size={20} />,
-      link: "/about"
-    }
+      link: "/about",
+    },
   ];
 
   const ContactOpt = [
@@ -43,20 +32,20 @@ const BottomNavigation = () => {
       id: 1,
       icon: <Linkedin className="text-black dark:text-white" size={16} />,
       title: "Linkedin",
-      link: "https://www.linkedin.com/in/dzulkiram-hilmi/"
+      link: "https://www.linkedin.com/in/dzulkiram-hilmi/",
     },
     {
       id: 2,
       icon: <Mail className="text-black dark:text-white" size={16} />,
       title: "Email",
-      action: "email"
+      action: "email",
     },
     {
       id: 3,
       icon: <Twitter className="text-black dark:text-white" size={16} />,
       title: "Twitter",
-      link: "https://x.com/BroKariim"
-    }
+      link: "https://x.com/BroKariim",
+    },
   ];
 
   const [active, setActive] = useState(0);
@@ -81,15 +70,8 @@ const BottomNavigation = () => {
               <HoverCard>
                 <HoverCardTrigger asChild>
                   {menu.link ? (
-                    <Link
-                      href={menu.link}
-                      className="flex flex-col text-center  items-center cursor-pointer px-2 "
-                    >
-                      <span
-                        className={`${active === index ? "duration-700 opacity-100 font-bold" : "opacity-40"}`}
-                      >
-                        {menu.icon}
-                      </span>
+                    <Link href={menu.link} className="flex flex-col text-center  items-center cursor-pointer px-2 ">
+                      <span className={`${active === index ? "duration-700 opacity-100 font-bold" : "opacity-40"}`}>{menu.icon}</span>
                     </Link>
                   ) : (
                     <button
@@ -101,19 +83,13 @@ const BottomNavigation = () => {
                         }
                       }}
                     >
-                      <span
-                        className={`${active === index ? "duration-700 opacity-100 font-bold" : "opacity-40"}`}
-                      >
-                        {menu.icon}
-                      </span>
+                      <span className={`${active === index ? "duration-700 opacity-100 font-bold" : "opacity-40"}`}>{menu.icon}</span>
                     </button>
                   )}
                 </HoverCardTrigger>
 
                 <HoverCardContent className="w-80">
-                  <div className="left-1/2 bottom-8 text-xs text-white transform -translate-x-1/2 absolute flex justify-center rounded-md border-[.5px] border-[#24262b] bg-[#16171a]  p-1 duration-300 space-x-4">
-                    {menu.name}
-                  </div>
+                  <div className="left-1/2 bottom-8 text-xs text-white transform -translate-x-1/2 absolute flex justify-center rounded-md border-[.5px] border-[#24262b] bg-[#16171a]  p-1 duration-300 space-x-4">{menu.name}</div>
                 </HoverCardContent>
               </HoverCard>
             </li>
@@ -123,14 +99,12 @@ const BottomNavigation = () => {
         <div className="px-2 border rounded-md border-gray-700 dark:bg-[#09090b] py-2">
           <HoverCard>
             <HoverCardTrigger>
-              <button className="flex items-center justify-center gap-2 text-xs font-medium rounded-md">
-                <CodeXml size={20} color={"#bd4242"}  />
-              </button>
+              <Link href="https://github.com/BroKarim/portofolio" target="_blank" className="flex items-center justify-center gap-2 text-xs font-medium rounded-md">
+                <CodeXml size={20} color={"#bd4242"} />
+              </Link>
             </HoverCardTrigger>
             <HoverCardContent className="w-80">
-              <div className="left-1/2 bottom-8 text-xs text-white transform -translate-x-1/2 absolute flex justify-center rounded-md border-[.5px] border-[#24262b] bg-[#16171a]  p-1 duration-300 space-x-4">
-                source code
-              </div>
+              <div className="left-1/2 bottom-8 text-xs text-white transform -translate-x-1/2 absolute flex justify-center rounded-md border-[.5px] border-[#24262b] bg-[#16171a]  p-1 duration-300 space-x-4">source code</div>
             </HoverCardContent>
           </HoverCard>
         </div>
@@ -138,9 +112,7 @@ const BottomNavigation = () => {
         <div
           id="navbarCollapse"
           className={`navbar left-1/2 text-white dark:text-black  transform -translate-x-1/2 absolute  my-4 w-32 rounded-md border-[.5px] border-[#24262b] bg-white dark:bg-[#16171a]  py-1 duration-300  ${
-            navbarOpen
-              ? "visibility bottom-10 opacity-100"
-              : "invisible bottom-[120%] opacity-0"
+            navbarOpen ? "visibility bottom-10 opacity-100" : "invisible bottom-[120%] opacity-0"
           }`}
         >
           <ul className="grid grid-cols-3 gap-2 px-2">
@@ -149,11 +121,7 @@ const BottomNavigation = () => {
                 <HoverCard>
                   <HoverCardTrigger asChild>
                     {contact.link ? (
-                      <Link
-                        href={contact.link}
-                        target="_blank"
-                        className="flex text-xs text-white flex-col  items-center p-2  dark:bg-[#24262b] rounded-md hover:bg-[#51535a]  "
-                      >
+                      <Link href={contact.link} target="_blank" className="flex text-xs text-white flex-col  items-center p-2  dark:bg-[#24262b] rounded-md hover:bg-[#51535a]  ">
                         <button onClick={closeNavbar}>{contact.icon}</button>
                       </Link>
                     ) : (
@@ -172,9 +140,7 @@ const BottomNavigation = () => {
                     )}
                   </HoverCardTrigger>
                   <HoverCardContent className="w-80">
-                    <div className="left-1/2 bottom-10 text-xs text-white transform -translate-x-1/2 absolute flex justify-center rounded-md border-[.5px] border-[#24262b] bg-[#16171a]  p-1 duration-300 space-x-4">
-                      {contact.title}
-                    </div>
+                    <div className="left-1/2 bottom-10 text-xs text-white transform -translate-x-1/2 absolute flex justify-center rounded-md border-[.5px] border-[#24262b] bg-[#16171a]  p-1 duration-300 space-x-4">{contact.title}</div>
                   </HoverCardContent>
                 </HoverCard>
               </li>
